@@ -1,6 +1,7 @@
 const input = document.querySelector('#carta-texto');
 const createBtn = document.querySelector('#criar-carta');
 const cartaGerada = document.querySelector('#carta-gerada');
+const contador = document.querySelector('#carta-contador');
 const classesToAdd = {
   styles: false,
   stylesOptions: 3,
@@ -105,6 +106,7 @@ function createCarta(text) {
     addRandomClasses(newSpan);
     cartaGerada.appendChild(newSpan);
   }
+  contador.innerText = words.length;
 }
 
 function handleCreateBtn() {
