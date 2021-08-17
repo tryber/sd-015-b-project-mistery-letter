@@ -98,15 +98,15 @@ function addRandomClasses(span) {
 }
 
 function createCarta(text) {
-	const words = text.split(' ');
-	const contador = document.querySelector('#carta-contador');
+  const words = text.split(' ');
+  const contador = document.querySelector('#carta-contador');
   for (let index = 0; index < words.length; index += 1) {
     const newSpan = document.createElement('span');
     newSpan.innerText = words[index];
     addRandomClasses(newSpan);
     cartaGerada.appendChild(newSpan);
-	}
-	console.log(contador);
+  }
+  console.log(contador);
   contador.innerText = words.length;
 }
 
