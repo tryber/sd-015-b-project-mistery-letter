@@ -4,7 +4,7 @@ const criarCarta = document.getElementById('criar-carta');
 const cartaContador = document.getElementById('carta-contador');
 const style = ['newspaper', 'magazine1', 'magazine2'];
 const size = ['medium', 'big', 'reallybig'];
-const rotation = ['ratatelfert', 'rotateright'];
+const rotation = ['rotateleft', 'rotateright'];
 const inclination = ['skewleft', 'skewright'];
 
 let random = [];
