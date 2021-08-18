@@ -80,7 +80,7 @@ describe('3 - Deve haver um botão com id="criar-carta" e ao clicar nesse botão
   it('Será validado que existe um elemento button com `id="criar-carta"`', () => {
     cy.get(LETTER_ADD_BUTTON_SELECTOR).should('exist');
   });
-  
+
   it('Será validado que ao clicar no botão, a carta misteriosa deve ser gerada', () => {
     const letterContent1 = 'esta é uma carta com 7 palavras';
     checkLetterContent(letterContent1);
@@ -109,7 +109,7 @@ describe("5 - Se o usuário não preencher o campo ou preencher com apenas espa�
   beforeEach(() => {
     cy.visit('./index.html');
   });
-  
+
   it('Será validado que irá exibir a mensagem "Por favor, digite o conteúdo da carta." no elemento `p` com o `id="carta-gerada"', () => {
     const letterContent = ' ';
 
@@ -121,7 +121,7 @@ describe("5 - Se o usuário não preencher o campo ou preencher com apenas espa�
     });
   });
 });
-  
+
 describe('6 - Crie a classe `newspaper`', () => {
   it('Será validado se a classe `newspaper` possui a propriedade `background-color` igual a rgb(250, 235, 215)', () => {
     const properties = [{
@@ -130,7 +130,7 @@ describe('6 - Crie a classe `newspaper`', () => {
     }];
 
     checkClass('newspaper', properties);
-  }); 
+  });
 
   it('Será validado se a classe `newspaper` possui `font-family` igual a "Times New Roman"', () => {
     const properties = [{
@@ -140,7 +140,7 @@ describe('6 - Crie a classe `newspaper`', () => {
     }];
 
     checkClass('newspaper', properties);
-  }); 
+  });
 
   it('Será validado se a classe `newspaper` possui a propriedade `font-weight` igual a 700', () => {
     const properties = [{
@@ -161,7 +161,7 @@ describe('7 - Crie a classe `magazine1`', () => {
 
     checkClass('magazine1', properties);
   });
-  
+
   it('Será validado se a classe `magazine1` possui  a propriedade `color` igual a rgb(255, 255, 255)`', () => {
     const properties = [{
       key: 'color',
@@ -207,7 +207,7 @@ describe('8 - Crie a classe `magazine2`', () => {
       value: 'images/pink-pattern.png',
       match: true
     }];
-    
+
     checkClass('magazine2', properties);
   });
 
@@ -216,7 +216,7 @@ describe('8 - Crie a classe `magazine2`', () => {
       key: 'color',
       value: 'rgb(255, 0, 255)'
     }];
-    
+
     checkClass('magazine2', properties);
   });
 
@@ -226,7 +226,7 @@ describe('8 - Crie a classe `magazine2`', () => {
       value: 'Verdana',
       match: true
     }];
-    
+
     checkClass('magazine2', properties);
   });
 
@@ -235,7 +235,7 @@ describe('8 - Crie a classe `magazine2`', () => {
       key: 'font-weight',
       value: '900',
     }];
-    
+
     checkClass('magazine2', properties);
   });
 });
@@ -246,7 +246,7 @@ describe('9 - Crie a classe `medium`', () => {
       key: 'font-size',
       value: '20px'
     }];
-    
+
     checkClass('medium', properties);
   });
 
@@ -255,7 +255,7 @@ describe('9 - Crie a classe `medium`', () => {
       key: 'padding',
       value: '8px'
     }];
-    
+
     checkClass('medium', properties);
   });
 });
@@ -266,7 +266,7 @@ describe('10 - Crie a classe `big`', () => {
       key: 'font-size',
       value: '30px'
     }];
-    
+
     checkClass('big', properties);
   });
 
@@ -275,7 +275,7 @@ describe('10 - Crie a classe `big`', () => {
       key: 'padding',
       value: '10px'
     }];
-    
+
     checkClass('big', properties);
   });
 });
@@ -286,7 +286,7 @@ describe('11 - Crie a classe `reallybig`', () => {
       key: 'font-size',
       value: '40px'
     }];
-    
+
     checkClass('reallybig', properties);
   });
 
@@ -295,7 +295,7 @@ describe('11 - Crie a classe `reallybig`', () => {
       key: 'padding',
       value: '15px'
     }];
-    
+
     checkClass('reallybig', properties);
   });
 });
@@ -374,8 +374,8 @@ describe('16 - Adicione as classes de forma aleatória a fim de estilizar as pal
       });
     });
   });
-    
-  it('Será validado se as classes das duas cartas não são exatamente iguais', () => { 
+
+  it('Será validado se as classes das duas cartas não são exatamente iguais', () => {
     expect(first).to.not.deep.equal(second);
   });
 });
@@ -383,7 +383,7 @@ describe('16 - Adicione as classes de forma aleatória a fim de estilizar as pal
 describe('17 - Com uma carta misteriosa gerada, adicione a possibilidade de alterar o estilo de uma palavra específica ao clicar nela', () => {
   const letterContent = 'esta é uma carta';
 
-  beforeEach(() => {  
+  beforeEach(() => {
     console.log("here");
     cy.visit('./index.html');
     createLetter(letterContent);
@@ -411,7 +411,7 @@ describe('17 - Com uma carta misteriosa gerada, adicione a possibilidade de alte
     });
 
     expect(first).to.not.deep.equal(second);
-  });  
+  });
 });
 
 describe('18 - Deve haver um parágrafo com o id="carta-contador" onde existirá um contador de palavras', () => {
