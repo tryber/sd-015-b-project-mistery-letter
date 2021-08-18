@@ -20,10 +20,7 @@ function generateRandomStyle() {
 
 function generateLetter() {
   cartaGerada.innerHTML = '';
-  if (cartaTexto.value === '') {
-    cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
-    cartaContador.innerHTML = '';
-  } else {
+  if (/\S/.test(cartaTexto.value)) {
     array = cartaTexto.value.split(' ');
     for (let index = 0; index < array.length; index += 1) {
       generateRandomStyle();
@@ -33,6 +30,9 @@ function generateLetter() {
       cartaGerada.appendChild(word);
     }
     cartaContador.innerText = array.length;
+  } else {
+    cartaGerada.innerText = 'Por favor, digite o conteúdo da carta.';
+    cartaContador.innerHTML = '';
   }
 }
 
