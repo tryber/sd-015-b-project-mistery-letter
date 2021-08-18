@@ -10,6 +10,7 @@ main {
   height: 500px;
   opacity: 0.95;
 }
+
 header {
   padding: 30px;
   margin: 0;
@@ -24,7 +25,7 @@ input {
 }
 
 p {
-  background-color: #FFFFFF;
+  background-color: #FFF;
   max-inline-size: 30%;
   max-block-size: 80%;
   word-break: break-word;
@@ -33,6 +34,7 @@ p {
 span {
   word-break: break-all;
 }
+
 button {
   padding: 15px;
 }
@@ -44,7 +46,7 @@ main > * {
 .mainTitle {
   color: #E4ECF5;
   font-size: 40px;
-  text-shadow: 3px 2px 5px #000000;
+  text-shadow: 3px 2px 5px black;
 }
 
 #carta-texto {
@@ -60,4 +62,25 @@ main > * {
   font-weight: 800;
   font-size: 2em;
   color: #F0F2F5;
+}
+
+.newspaper {
+  background-color: antiquewhite;
+  font-family: Times New Roman;
+  font-weight: bold;
+}
+
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: Verdana;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.magazine2 {
+  background-image: url(images/pink-pattern.png);
+  color: fuchsia;
+  font-family: Verdana;
+  font-weight:900;
 }
