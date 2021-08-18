@@ -23,3 +23,10 @@ input {
   text-transform: uppercase;
 }
 
+.magazine2 {
+  background-image: "images/pink-pattern.png";
+  color: fuchsia;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+}
+
