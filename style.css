@@ -35,3 +35,7 @@ input {
   padding: 8px;
 }
 
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
