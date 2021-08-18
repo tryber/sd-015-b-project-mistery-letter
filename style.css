@@ -8,3 +8,9 @@
 input {
   width: 400px;
 }
+
+.newspaper {
+  background-color: antiquewhite;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
