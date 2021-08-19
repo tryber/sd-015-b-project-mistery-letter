@@ -44,31 +44,43 @@ function generateStyleClassList() {
   let groupList = [styleGroup, sizeGroup, rotationGroup, skewGroup];
   let styleClassList = [];
   for (let group of groupList) {
-    randomClassNumber = randomNumberGenerator(group.length)
+    randomClassNumber = randomNumberGenerator(group.length);
     if (randomClassNumber) {
-      styleClassList.push(group[randomClassNumber - 1])
-      group = group.slice(randomClassNumber - 1)
+      styleClassList.push(group[randomClassNumber - 1]);
+      group = group.slice(randomClassNumber - 1);
     }
   }
-  return styleClassList
+  return styleClassList;
 }
 
-function addClassToElements() {
+function resetElementClass(element) {
+  element.className = "";
+}
+
+function addRandomClassToSingleElement(event) {
+  let element = event.target;
+  resetElementClass(element);
+  let styleClassList = generateStyleClassList();
+    for (let styleClass of styleClassList) {
+      element.classList.add(styleClass);
+    }
+}
+
+function letterWordCounter(wordslist) {
+  wordCounter = document.getElementById("carta-contador")
+  wordCounter.innerText = wordslist.length
+}
+
+function addRandomClassToElements() {
   let wordsList = document.querySelectorAll("#carta-gerada span");
+  letterWordCounter(wordsList);
   for (let word of wordsList) {
+    word.addEventListener("click", addRandomClassToSingleElement)
     let styleClassList = generateStyleClassList();
     for (let styleClass of styleClassList) {
       word.classList.add(styleClass);
     }
   }
-}
-
-function resetLetterClasses() {
-  let wordsList = document.querySelectorAll("#carta-gerada span");
-  for (word of wordsList) {
-    word.className = ""
-  }
-  addClassToElements()
 }
 
 function generateLetter() {
@@ -78,15 +90,13 @@ function generateLetter() {
   if (letterText) {
     checkIfHasLetter(letterContainer);
     generateLetterElements(letterText, letterContainer);
-    addClassToElements();
+    addRandomClassToElements();
   }
 }
 
 function addEventListeners() {
   const generateLetterButton = document.getElementById("criar-carta");
   generateLetterButton.addEventListener("click", generateLetter);
-  const letter = document.getElementById("carta-gerada");
-  letter.addEventListener("click", resetLetterClasses);
 
 }
 
