@@ -43,6 +43,12 @@ function randomClassList() {
   return aux.join(' ');
 }
 
+// function to change classList of an element
+function changeClassElement(eventoDeOrigem) {
+  const element = eventoDeOrigem.target;
+  element.className = randomClassList();
+}
+
 // function to create span for any word in input id carta-texto
 function createSpanForInputWords() {
   deletePChilds();
@@ -53,6 +59,7 @@ function createSpanForInputWords() {
       const wordToSpan = document.createElement('span');
       wordToSpan.innerText = phraseArray[i];
       wordToSpan.className = randomClassList();
+      wordToSpan.addEventListener('click', changeClassElement);
       letterPhrase.appendChild(wordToSpan);
     }
     contWordsText.innerText = letterPhrase.children.length;
