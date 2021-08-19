@@ -2,6 +2,10 @@
 const inputText = document.getElementById('carta-texto');
 const letterPhrase = document.getElementById('carta-gerada');
 const buttonToGenerateLetter = document.getElementById('criar-carta');
+const styleClasses = [`newspaper`, `magazine1`, `magazine2`];
+const sizeClasses = [`medium`, `big`, `reallybig`];
+const rotateClasses = [`rotateleft`, `rotateright`];
+const skewClasses = [`skewleft`, `skewright`];
 
 // function to delete all elements of p
 function deletePChilds() {
@@ -21,6 +25,7 @@ function createSpanForInputWords() {
     for (let i = 0; i < phraseArray.length; i += 1) {
       const wordToSpan = document.createElement('span');
       wordToSpan.innerText = phraseArray[i];
+      wordToSpan.className = randomClassList();
       letterPhrase.appendChild(wordToSpan);
     }
   } else {
@@ -30,3 +35,29 @@ function createSpanForInputWords() {
 
 // addEventListener to buttonToGenerateLetter
 buttonToGenerateLetter.addEventListener('click', createSpanForInputWords);
+
+// function to generate integer random number in range [0, max]
+function randomInteger(max) {
+  return Math.floor(Math.random() * (max + 1));
+}
+
+// select one random of arrayClasses and push to array
+function selectRandomElement(array, arrayClasses) {
+  const aux = array;
+  const numElements = arrayClasses.length;
+  const randomIndex = randomInteger(numElements);
+  if (randomIndex <= numElements - 1) {
+    aux.push(arrayClasses[randomIndex]);
+  }
+  return aux;
+}
+
+// function to return an classList with 4 or less random classes
+function randomClassList() {
+  let aux = [];
+  aux = selectRandomElement(aux, styleClasses);
+  aux = selectRandomElement(aux, sizeClasses);
+  aux = selectRandomElement(aux, skewClasses);
+  aux = selectRandomElement(aux, rotateClasses);
+  return aux.join(' ');
+}
