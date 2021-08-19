@@ -358,6 +358,7 @@ describe('16 - Adicione as classes de forma aleatória a fim de estilizar as pal
     cy.get(LETTER_GENERATED_SPANS_SELECTOR).then(($el) => {
       $el.each((_index, span) => {
         const klasses = span.className.split(WORDS_SPLIT_CHARACTER);
+        console.log(klasses)
         expect(ALLOWED_CLASSES).to.include.members(klasses);
         first.push(...klasses);
       });
@@ -409,8 +410,8 @@ describe('17 - Com uma carta misteriosa gerada, adicione a possibilidade de alte
       const klasses = span.className.split(WORDS_SPLIT_CHARACTER);
       second.push(...klasses);
     });
-
     expect(first).to.not.deep.equal(second);
+    
   });  
 });
 
