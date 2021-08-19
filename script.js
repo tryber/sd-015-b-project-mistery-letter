@@ -3,8 +3,18 @@ const inputText = document.getElementById('carta-texto');
 const letterPhrase = document.getElementById('carta-gerada');
 const buttonToGenerateLetter = document.getElementById('criar-carta');
 
+// function to delete all elements of p
+function deletePChilds() {
+  letterPhrase.innerText = '';
+  const childs = letterPhrase.children;
+  for (let i = 0; i < childs.length; i += 1) {
+    childs[i].remove();
+  }
+}
+
 // function to create span for any word in input id carta-texto
 function createSpanForInputWords() {
+  deletePChilds();
   const phrase = inputText.value;
   if (phrase.trim() !== '') {
     const phraseArray = phrase.trim().split(' ');
