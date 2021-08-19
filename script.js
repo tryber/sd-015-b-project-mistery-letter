@@ -1,4 +1,4 @@
-//utils
+// utils
 function randomNumberGenerator(limit) {
   const number = (Math.random() * limit);
   const roundNumber = Math.round(number);
@@ -6,21 +6,21 @@ function randomNumberGenerator(limit) {
 }
 
 function addEventListenerToArray(array, event, func) {
-  for (let element of array) {
+  for (const element of array) {
     element.addEventListener(event, func);
   }
 }
 
 function checkIfHasLetter(letterContainer) {
-  const createdLetter = document.querySelector("#carta-gerada span");
+  const createdLetter = document.querySelector('#carta-gerada span');
   if (createdLetter) {
-    letterContainer.innerHTML = "";
+    letterContainer.innerHTML = '';
   }
 }
 
 function generateLetterElements(letterText, letterContainer) {
-  for (let word of letterText) {
-    let letterElement = document.createElement("span");
+  for (const word of letterText) {
+    const letterElement = document.createElement('span');
     letterElement.innerText = word;
     letterContainer.appendChild(letterElement);
   }
@@ -29,20 +29,19 @@ function generateLetterElements(letterText, letterContainer) {
 function checkInputEmpty(inputElement, letterContainer) {
   const inputText = inputElement.value.split(' ');
   if (inputText.join('')) {
-    letterContainer.innerHTML = "";
+    letterContainer.innerHTML = '';
     return inputText;
-  } else {
-    letterContainer.innerText = "Por favor, digite o conteúdo da carta.";
   }
+  letterContainer.innerText = 'Por favor, digite o conteúdo da carta.';
 }
 
 function generateStyleClassList() {
-  let styleGroup = ["newspaper", "magazine1", "magazine2"];
-  let sizeGroup = ["medium", "big", "reallybig"];
-  let rotationGroup = ["rotateleft", "rotateright"];
-  let skewGroup = ["skewleft", "skewright"];
-  let groupList = [styleGroup, sizeGroup, rotationGroup, skewGroup];
-  let styleClassList = [];
+  const styleGroup = ['newspaper', 'magazine1', 'magazine2'];
+  const sizeGroup = ['medium', 'big', 'reallybig'];
+  const rotationGroup = ['rotateleft', 'rotateright'];
+  const skewGroup = ['skewleft', 'skewright'];
+  const groupList = [styleGroup, sizeGroup, rotationGroup, skewGroup];
+  const styleClassList = [];
   for (let group of groupList) {
     randomClassNumber = randomNumberGenerator(group.length);
     if (randomClassNumber) {
@@ -54,38 +53,38 @@ function generateStyleClassList() {
 }
 
 function resetElementClass(element) {
-  element.className = "";
+  element.className = '';
 }
 
 function addRandomClassToSingleElement(event) {
-  let element = event.target;
+  const element = event.target;
   resetElementClass(element);
-  let styleClassList = generateStyleClassList();
-    for (let styleClass of styleClassList) {
-      element.classList.add(styleClass);
-    }
+  const styleClassList = generateStyleClassList();
+  for (const styleClass of styleClassList) {
+    element.classList.add(styleClass);
+  }
 }
 
 function letterWordCounter(wordslist) {
-  wordCounter = document.getElementById("carta-contador")
-  wordCounter.innerText = wordslist.length
+  wordCounter = document.getElementById('carta-contador');
+  wordCounter.innerText = wordslist.length;
 }
 
 function addRandomClassToElements() {
-  let wordsList = document.querySelectorAll("#carta-gerada span");
+  const wordsList = document.querySelectorAll('#carta-gerada span');
   letterWordCounter(wordsList);
-  for (let word of wordsList) {
-    word.addEventListener("click", addRandomClassToSingleElement)
-    let styleClassList = generateStyleClassList();
-    for (let styleClass of styleClassList) {
+  for (const word of wordsList) {
+    word.addEventListener('click', addRandomClassToSingleElement);
+    const styleClassList = generateStyleClassList();
+    for (const styleClass of styleClassList) {
       word.classList.add(styleClass);
     }
   }
 }
 
 function generateLetter() {
-  const letterContainer = document.getElementById("carta-gerada");
-  const inputElement = document.getElementById("carta-texto");
+  const letterContainer = document.getElementById('carta-gerada');
+  const inputElement = document.getElementById('carta-texto');
   const letterText = checkInputEmpty(inputElement, letterContainer);
   if (letterText) {
     checkIfHasLetter(letterContainer);
@@ -95,11 +94,10 @@ function generateLetter() {
 }
 
 function addEventListeners() {
-  const generateLetterButton = document.getElementById("criar-carta");
-  generateLetterButton.addEventListener("click", generateLetter);
-
+  const generateLetterButton = document.getElementById('criar-carta');
+  generateLetterButton.addEventListener('click', generateLetter);
 }
 
-window.onload = function() {
+window.onload = function () {
   addEventListeners();
-}
+};
