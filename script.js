@@ -6,10 +6,10 @@ const buttonToGenerateLetter = document.getElementById('criar-carta');
 // function to create span for any word in input id carta-texto
 function createSpanForInputWords() {
   const phrase = inputText.value;
-  let phraseArray = phrase.split(' ');
-  for (let i of phraseArray) {
+  const phraseArray = phrase.split(' ');
+  for (let i = 0; i < phraseArray.length; i += 1) {
     const wordToSpan = document.createElement('span');
-    wordToSpan.innerText = i;
+    wordToSpan.innerText = phraseArray[i];
     letterPhrase.appendChild(wordToSpan);
   }
 }
