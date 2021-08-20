@@ -2,7 +2,7 @@ const paragrafo = document.getElementById('carta-gerada');
 const cartaContador = document.getElementById('carta-contador');
 
 function contador() {
-  const span = document.getElementsByTagName('span');
+  const span = document.querySelectorAll('#carta-gerada span');
 
   cartaContador.innerText = span.length;
 }
@@ -67,7 +67,7 @@ const buttonGenerateMail = document.getElementById('criar-carta');
 buttonGenerateMail.addEventListener('click', generateMail);
 
 function changeSpan(evento) {
-  const span = document.getElementsByTagName('span');
+  const span = document.querySelectorAll('#carta-gerada span');
 
   for (let index = 0; index < span.length; index += 1) {
     if (evento.target === span[index]) {
