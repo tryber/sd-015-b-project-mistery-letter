@@ -15,7 +15,7 @@ header {
   padding: 30px;
   margin: 0;
   text-align: center;
-  background-color: #384BF5;
+  background-color: #384bf5;
   border: 5px outset #8292b3;
 }
 
@@ -25,7 +25,7 @@ input {
 }
 
 p {
-  background-color: #FFF;
+  background-color: #fff;
   max-inline-size: 30%;
   max-block-size: 80%;
   word-break: break-word;
@@ -44,7 +44,7 @@ main > * {
 }
 
 .mainTitle {
-  color: #E4ECF5;
+  color: #e4ecf5;
   font-size: 40px;
   text-shadow: 3px 2px 5px black;
 }
@@ -61,7 +61,7 @@ main > * {
   font-family: Texturina, serif;
   font-weight: 800;
   font-size: 2em;
-  color: #F0F2F5;
+  color: #f0f2f5;
 }
 
 .newspaper {
@@ -82,5 +82,32 @@ main > * {
   background-image: url(images/pink-pattern.png);
   color: fuchsia;
   font-family: Verdana;
-  font-weight:900;
+  font-weight: 900;
+}
+
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.reallybig {
+  font-size: 40px;
+  padding: 15px;
+}
+
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
+.rotateright {
+  transform: rotate(5deg);
+}
+
+.skewright {
+  transform: skewX(-10deg);
 }
