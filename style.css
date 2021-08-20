@@ -1,7 +1,11 @@
+p {
+  cursor: pointer;
+}
+
 .newspaper {
   background-color: antiquewhite;
-  font-family:'Times New Roman', Times, serif;
-  font-weight: bold;
+  font-family: Times New Roman, Times, serif;
+  font-weight: 700;
 }
 
 .magazine1 {
@@ -17,6 +21,29 @@
   color: fuchsia;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
+}
+
+.other1 {
+  background-color: rgb(168, 180, 172);
+  color: blue;
+  font-family: Courier, monospace;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.other2 {
+  background-color: rgb(167, 22, 211);
+  color: black;
+  font-family: monospace;
+  font-weight: 200;
+}
+
+.other3 {
+  background-color: rgba(12, 228, 84, 0.897);
+  color: rgb(217, 255, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .medium {
@@ -48,4 +75,20 @@
 
 .skewright {
   transform: skewX(-10deg);
+}
+
+.skewleft2 {
+  transform: skewX(20deg);
+}
+
+.skewright2 {
+  transform: skewX(-20deg);
+}
+
+.skewleft3 {
+  transform: skewX(30deg);
+}
+
+.skewright3 {
+  transform: skewX(-30deg);
 }
