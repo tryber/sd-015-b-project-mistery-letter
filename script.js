@@ -30,7 +30,7 @@ function generateClassString() {
   classList = `${classStyle[vector[0]]} `;
   classList = `${classList + classSize[vector[1]]} `;
   classList = `${classList + classRot[vector[2]]} `;
-  classList += classSkew[vector[3]];
+  classList += `${classSkew[vector[3]]} `;
   return classList;
 }
 
