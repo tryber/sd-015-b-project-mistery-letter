@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+}
+
+main {
+  background-image: url('./images/background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  opacity: 0.9;
+}
+
+header {
+  padding: 30px;
+  margin: 0;
+  text-align: center;
+  background-color: #384bf5;
+  border: 5px outset #8292b3;
+}
+
+input {
+  border: 1px solid #000000;
+  margin-bottom: 20px;
+}
+
+span {
+  display:inline-block;
+  margin: 4px 1px;
+}
+
+button {
+  padding: 15px;
+}
+
+main > * {
+  margin-left: 50px;
+}
+
+#carta-texto {
+  padding: 12px 20px;
+  width: 75%;
+  display: block;
+  font-size: 17px;
+}
+
+#carta-gerada {
+  font-size: 25px;
+  color: #033
+}
+
+.mainTitle {
+  color: #e4ecf5;
+  font-size: 40px;
+  text-shadow: 3px 2px 5px black;
+}
+
+.titleInput {
+  font-family: Texturina, serif;
+  font-weight: 800;
+  font-size: 2em;
+  color: #f0f2f5;
+}
+
+.newspaper {
+  background-color: antiquewhite;
+  font-family: Times New Roman;
+  font-weight: bold;
+}
+
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: Verdana;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.magazine2 {
+  background-image: url(images/pink-pattern.png);
+  color: fuchsia;
+  font-family: Verdana;
+  font-weight: 900;
+}
+
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.reallybig {
+  font-size: 40px;
+  padding: 15px;
+}
+
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
+.rotateright {
+  transform: rotate(5deg);
+}
+
+.skewleft {
+  transform: skewX(10deg);
+}
+
+.skewright {
+  transform: skewX(-10deg);
+}
+
+.pContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: linear-gradient(to top, rgba(2, 8, 59, .1), rgba(2, 3, 41, 0.637));
+  max-width: 75%;
+  
+}
+
+.inputText {
+  padding-bottom: 30px;
+}
+
