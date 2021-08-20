@@ -8,7 +8,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   height: 500px;
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
 header {
@@ -24,15 +24,9 @@ input {
   margin-bottom: 20px;
 }
 
-p {
-  background-color: #fff;
-  max-inline-size: 30%;
-  max-block-size: 80%;
-  word-break: break-word;
-}
-
 span {
-  word-break: break-all;
+  display:inline-block;
+  margin: 4px 1px;
 }
 
 button {
@@ -43,18 +37,22 @@ main > * {
   margin-left: 50px;
 }
 
+#carta-texto {
+  padding: 12px 20px;
+  width: 75%;
+  display: block;
+  font-size: 17px;
+}
+
+#carta-gerada {
+  font-size: 25px;
+  color: #033
+}
+
 .mainTitle {
   color: #e4ecf5;
   font-size: 40px;
   text-shadow: 3px 2px 5px black;
-}
-
-#carta-texto {
-  padding: 12px 20px;
-  width: 75%;
-  box-sizing: border-box;
-  display: block;
-  font-size: 17px;
 }
 
 .titleInput {
@@ -115,3 +113,16 @@ main > * {
 .skewright {
   transform: skewX(-10deg);
 }
+
+.pContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-image: linear-gradient(to top, rgba(2, 8, 59, .1), rgba(2, 3, 41, 0.637));
+  max-width: 75%;
+  
+}
+
+.inputText {
+  padding-bottom: 30px;
+}
+

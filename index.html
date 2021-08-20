@@ -14,10 +14,16 @@
         <h1 class="mainTitle">Carta Misteriosa</h1>
     </header>
     <main>
-        <label for="User" class="titleInput">Texto da Carta: </label>
-        <input type="text" name="carta" id="carta-texto" />
-        <button id="criar-carta">Criar Carta</button>
-        <p id="carta-gerada"></p>
+        <section class="inputText">
+            <label for="carta-texto" class="titleInput">Texto da Carta: </label>
+            <input type="text" name="carta" id="carta-texto" />
+            <button id="criar-carta">Criar Carta</button>
+        </section>
+
+        <section class="pContainer">
+            <p id="carta-gerada"></p>
+        </section>
+
     </main>
     <p id="carta-contador"></p>
     <script src="script.js" defer></script>
