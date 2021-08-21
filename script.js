@@ -11,6 +11,12 @@ function randomNumber(value) {
   return result;
 }
 
+function contadorDePalavras(arr) {
+  const contador = arr.length;
+  const p = document.getElementById('carta-contador');
+  p.innerText = contador;
+}
+
 function gerarCarta() {
   paragrafoResultado.innerHTML = '';
   const textoInserido = input.value.split(' ');
@@ -28,6 +34,8 @@ function gerarCarta() {
     span.classList.add(inclinacaoAleatoria);
     paragrafoResultado.appendChild(span);
   });
+
+  contadorDePalavras(textoInserido);
 }
 
 function verificarValorInserido() {
