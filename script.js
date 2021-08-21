@@ -13,4 +13,14 @@ function gerarCarta() {
   });
 }
 
-btnCriarCarta.addEventListener('click', gerarCarta);
+function verificarValorInserido() {
+  const inputSemEspacos = input.value.replace(/( )+/g, '');
+
+  if (inputSemEspacos === '') {
+    paragrafoResultado.innerText = 'Por favor, digite o conteúdo da carta.';
+  } else {
+    gerarCarta();
+  }
+}
+
+btnCriarCarta.addEventListener('click', verificarValorInserido);
