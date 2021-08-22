@@ -26,9 +26,6 @@ function getRandomClasses() {
   return classList;
 }
 
-const cartaContador = document.querySelector('#carta-contador');
-let wordCounter = 0;
-
 function createLetter() {
   if (input.value === '' || input.value < ' ') {
     return alert('por favor, digite o conteúdo da carta.');
