@@ -8,22 +8,15 @@ function contador() {
 }
 
 function randomClassSelect(group, span) {
-  const indexRandom = Math.round(Math.random() * group.length);
+  const indexRandom = Math.floor(Math.random() * group.length);
 
   span.classList.add(group[indexRandom]);
 }
 
 function randomClass(span) {
-  const styleGroup = ['newspaper', 'magazine1', 'magazine2', 'other1', 'other2', 'other3'];
-  const sizeGroup = ['medium', 'big', 'reallybig'];
-  const rotationGroup = ['rotateleft', 'rotateright'];
-  const inclinationGroup = ['skewleft', 'skewright', 'skewleft2', 'skewright2', 'skewleft3',
-    'skewright3'];
+  const styleGroup = ['newspaper', 'magazine1', 'magazine2', 'medium', 'big', 'reallybig', 'skewleft', 'skewright', 'rotateleft', 'rotateright'];
 
   randomClassSelect(styleGroup, span);
-  randomClassSelect(sizeGroup, span);
-  randomClassSelect(rotationGroup, span);
-  randomClassSelect(inclinationGroup, span);
 }
 
 function removeSpan() {
