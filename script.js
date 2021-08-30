@@ -1,6 +1,7 @@
 const cartaTexto = document.getElementById('carta-texto');
 const cartaGerada = document.getElementById('carta-gerada');
 const criarCarta = document.getElementById('criar-carta');
+const cartaContador = document.getElementById('carta-contador');
 const groupStyle = ['newspaper', 'magazine1', 'magazine2'];
 const groupHeight = ['medium', 'big', 'reallybig'];
 const groupRotation = ['rotateleft', 'rotateright'];
@@ -36,6 +37,14 @@ function randomClassStyle() {
   return newSpanClass;
 }
 
+function countWords() {
+  if (cartaTexto.value !== '') {
+    cartaContador.innerText = cartaTexto.value.split(' ').length;
+  } else {
+    cartaContador.innerText = '0';
+  }
+}
+
 function newLetters() {
   const arrayCartaTexto = splitLetter(cartaTexto.value);
   console.log(arrayCartaTexto.length);
@@ -49,6 +58,7 @@ function newLetters() {
       cartaGerada.appendChild(newSpan);
     }
   }
+  countWords();
 }
 
 function btnCreateLetter() {
@@ -62,6 +72,7 @@ function clearLetter() {
   for (let index = (numChild - 1); index >= 0; index -= 1) {
     cartaGerada.removeChild(cartaGerada.childNodes[index]);
   }
+  countWords();
 }
 
 function focusClearLetter() {
