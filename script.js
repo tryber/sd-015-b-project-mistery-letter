@@ -25,7 +25,8 @@ function criaCartaMisteriosa() {
   const texto = document.getElementById('carta-texto');
   const textoSeparado = texto.value.split(' ');
   const elementoP = document.getElementById('carta-gerada');
-  if (texto.value === '') {
+
+  if ((texto.value === '') || (texto.value === ' ')) {
     elementoP.innerText = 'Por favor, digite o conteúdo da carta.';
   } else {
     elementoP.innerText = '';
