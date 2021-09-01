@@ -1,23 +1,32 @@
 const tagSpanPai = document.getElementById('carta-gerada');
+const grupoEstilo = ['newspaper', 'magazine1', 'magazine2'];
+const grupoTamanho = ['medium', 'big', 'reallybig'];
+const grupoRotacao = ['rotateleft', 'rotateright'];
+const grupoInclinacao = ['skewleft', 'skewright'];
 
-function geraCartaNucleo(textoSeparado) {
-  for (let i = 0; i < textoSeparado.length; i += 1) {
-    const tagSpan = document.createElement('span');
-    tagSpan.innerText = textoSeparado[i];
-    tagSpanPai.appendChild(tagSpan);
-  }
+// Gera número inteiro aleatório
+// De https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+function getRandomIntInclusive(max) {
+  const maximo = Math.floor(max);
+  return Math.floor(Math.random() * (maximo + 1));
+}
+
+function geraCartaNucleo(textoSeparado, i) {
+  const tagSpan = document.createElement('span');
+  tagSpan.innerText = textoSeparado[i];
+  const estilo = grupoEstilo[getRandomIntInclusive(grupoEstilo.length - 1)];
+  tagSpan.classList.add(estilo);
+  const tamanho = grupoTamanho[getRandomIntInclusive(grupoTamanho.length - 1)];
+  tagSpan.classList.add(tamanho);
+  const rotacao = grupoRotacao[getRandomIntInclusive(grupoRotacao.length - 1)];
+  tagSpan.classList.add(rotacao);
+  const inclinacao = grupoInclinacao[getRandomIntInclusive(grupoInclinacao.length - 1)];
+  tagSpan.classList.add(inclinacao);
+  tagSpanPai.appendChild(tagSpan);
 }
 function geraCarta(textoSeparado) {
-  const tagSpanExistente = document.getElementsByTagName('span');
-
-  if (tagSpanExistente.length === 0) {
-    geraCartaNucleo(textoSeparado);
-  }
-
   for (let i = 0; i < textoSeparado.length; i += 1) {
-    if (textoSeparado[i] !== tagSpanExistente[i].innerText) {
-      geraCartaNucleo(textoSeparado);
-    }
+    geraCartaNucleo(textoSeparado, i);
   }
 }
 
