@@ -34,6 +34,7 @@ function criaCartaMisteriosa() {
   const texto = document.getElementById('carta-texto');
   const textoSeparado = texto.value.split(' ');
   const elementoP = document.getElementById('carta-gerada');
+  const contadorP = document.getElementById('carta-contador');
 
   if ((texto.value === '') || (texto.value === ' ')) {
     elementoP.innerText = 'Por favor, digite o conteúdo da carta.';
@@ -41,6 +42,8 @@ function criaCartaMisteriosa() {
     elementoP.innerText = '';
     geraCarta(textoSeparado);
   }
+
+  contadorP.innerText = textoSeparado.length;
 }
 
 function clicarBotaoGerar() {
