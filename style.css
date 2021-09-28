@@ -1,0 +1,12 @@
+*{
+    background-color: rgb(181, 178, 182);
+}
+main{
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+
+#carta-texto{
+background-color: antiquewhite;
+}
