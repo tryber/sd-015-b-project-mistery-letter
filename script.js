@@ -11,4 +11,12 @@ const getInput = () => {
      letterResult.appendChild(span);
    });
  }
-createButton.addEventListener('click', getInput);
+ createButton.addEventListener('click', getInput);
+
+ function whithoutInput (){
+   if(input.value === '' || input.value === ' '){
+     input.innerText = 'Por favor, digite o conteúdo da carta.';
+   }
+
+ }
+createButton.addEventListener('click', whithoutInput);
