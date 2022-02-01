@@ -29,7 +29,7 @@ main {
 .magazine2 {
   background-image: url('./images/pink-pattern.png');
   color: fuchsia;
-  font-family: Verdana;
+  font-family: Verdana, Tahoma, sans-serif;
   font-weight: 900;
 }
 
