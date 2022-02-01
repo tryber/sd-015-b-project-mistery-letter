@@ -1,5 +1,5 @@
 * {
-    background-color: rgb(181, 178, 182);
+  background-color: rgb(181, 178, 182);
 }
 
 main {
@@ -14,14 +14,14 @@ main {
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: Times New Roman, Times, serif;
-  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
 }
 
 .magazine1 {
   background-color: teal;
   color: white;
-  font-family: Verdana; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -47,20 +47,19 @@ main {
   font-size: 40px;
   padding: 15px;
 }
-  
-  .rotateleft {
+
+.rotateleft {
   transform: rotate(-5deg);
 }
-  
-  .rotateright {
+
+.rotateright {
   transform: rotate(5deg);
 }
-  
-  .skewleft {
+
+.skewleft {
   transform: skewX(10deg);
 }
-  
-  .skewright {
+
+.skewright {
   transform: skewX(-10deg);
 }
-  
